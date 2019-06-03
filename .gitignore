@@ -20,6 +20,7 @@ testbench
 timing
 hc_output
 output_files
+work
 
 # ignore Quartus II generated files
 *_generation_script*
@@ -32,7 +33,6 @@ output_files
 *.html
 *.jdi
 *.jpg
-*.mif
 *.pin
 *.pof
 *.ptf.*
@@ -45,8 +45,13 @@ output_files
 *.sopc_builder
 *.summary
 *.tcl
-*.txt # Explicitly add any text files used
+# Explicitly add any text files used
+*.txt
+*.ver 
+*.wlf
+*.mpf
+*.mti
 *~
 *example*
 *sopc_*
-PLLJ_PLLSPE_INFO.txt # The generated PLL specification file
+
