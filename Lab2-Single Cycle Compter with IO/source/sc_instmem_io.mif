@@ -1,0 +1,22 @@
+DEPTH = 16; % Memory depth and width are required %
+WIDTH = 32; % Enter a decimal number %
+ADDRESS_RADIX = HEX; % Address and value radixes are optional %
+DATA_RADIX = HEX; % Enter BIN, DEC, HEX, or OCT; unless %
+% otherwise specified, radixes = HEX %
+CONTENT
+BEGIN
+ 0 : 340100c0; % main:    ori $1 $0 192  # address of in_port_0 %
+ 1 : 340200c4; %          ori $2 $0 196  # address of in_port_1 %
+ 2 : 34030080; %          ori $3 $0 128  # address of out_port_0 %
+ 3 : 34040084; %          ori $4 $0 132  # address of out_port_1 %
+ 4 : 34050088; %          ori $5 $0 136  # address of out_port_2 %
+ 5 : 8c260000; % loop:    lw $6, 0($1) %
+ 6 : ac660000; %          sw $6, 0($3) %
+ 7 : 8c470000; %          lw $7, 0($2) %
+ 8 : ac870000; %          sw $7, 0($4) %
+ 9 : 00c74020; %          add $8, $6, $7 %
+ A : aca80000; %          sw $8, 0($5) %
+ B : 08000005; %          j loop %
+ %  B : 1500fff7;         bne $8,$0, loop %
+ %  C : 0800000c; finish:  j finish %
+END ;
