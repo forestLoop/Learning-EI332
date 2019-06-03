@@ -1,11 +1,11 @@
 module sc_datamem (addr,datain,dataout,we,clock,mem_clk,dmem_clk,clrn,
-    out_port0,out_port1,out_port2,in_port0,in_port1,mem_dataout,io_read_data
+    out_port0,out_port1,out_port2,in_port0,in_port1,in_port2,mem_dataout,io_read_data
     );
 
     input [31:0] addr;
     input [31:0] datain;
     input we, clock,mem_clk,clrn;
-    input [31:0] in_port0,in_port1;
+    input [31:0] in_port0,in_port1,in_port2;
     output [31:0] dataout;
     output dmem_clk;
     output [31:0] out_port0,out_port1, out_port2;
@@ -29,6 +29,6 @@ module sc_datamem (addr,datain,dataout,we,clock,mem_clk,dmem_clk,clrn,
     // that is, the address space of I/O is from 100000 to 111111 word(4 bytes)
     io_output_reg io_output_regx3 (addr,datain,write_io_output_reg_enable,dmem_clk,clrn,out_port0,out_port1,out_port2);
     // module io_output_reg (addr,datain,write_io_enable,io_clk,clrn,out_port0,out_port1 );
-    io_input_reg io_input_regx2(addr,dmem_clk,io_read_data,in_port0,in_port1);
+    io_input_reg io_input_regx3(addr,dmem_clk,io_read_data,in_port0,in_port1,in_port2);
     // module io_input_reg (addr,io_clk,io_read_data,in_port0,in_port1);
 endmodule

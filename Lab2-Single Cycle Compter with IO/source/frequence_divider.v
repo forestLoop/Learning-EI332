@@ -1,4 +1,4 @@
-module freq_divider(input clk_50m, output reg out_clk);
+module frequence_divider(input clk_50m, output reg out_clk);
    parameter delay = 12_499_999;
    reg [24:0] counter = 0;
 
