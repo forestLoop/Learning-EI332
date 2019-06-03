@@ -1,0 +1,117 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 20:08:45  May 16, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		lab1_timer_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY lab1_timer
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:08:45  MAY 16, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name BDF_FILE lab1_timer.bdf
+set_global_assignment -name VERILOG_FILE timer.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_AF14 -to CLOCK_50
+set_location_assignment PIN_W15 -to start/pause
+set_location_assignment PIN_AA14 -to reset
+set_location_assignment PIN_AA15 -to display/stop
+set_location_assignment PIN_AB23 -to second_low[0]
+set_location_assignment PIN_AE29 -to second_low[1]
+set_location_assignment PIN_AD29 -to second_low[2]
+set_location_assignment PIN_AC28 -to second_low[3]
+set_location_assignment PIN_AD30 -to second_low[4]
+set_location_assignment PIN_AC29 -to second_low[5]
+set_location_assignment PIN_AC30 -to second_low[6]
+set_location_assignment PIN_V25 -to minute_high[0]
+set_location_assignment PIN_AA28 -to minute_high[1]
+set_location_assignment PIN_Y27 -to minute_high[2]
+set_location_assignment PIN_AB27 -to minute_high[3]
+set_location_assignment PIN_AB26 -to minute_high[4]
+set_location_assignment PIN_AA26 -to minute_high[5]
+set_location_assignment PIN_AA25 -to minute_high[6]
+set_location_assignment PIN_AA24 -to minute_low[0]
+set_location_assignment PIN_Y23 -to minute_low[1]
+set_location_assignment PIN_Y24 -to minute_low[2]
+set_location_assignment PIN_W22 -to minute_low[3]
+set_location_assignment PIN_W24 -to minute_low[4]
+set_location_assignment PIN_V23 -to minute_low[5]
+set_location_assignment PIN_W25 -to minute_low[6]
+set_location_assignment PIN_AD26 -to second_high[0]
+set_location_assignment PIN_AC27 -to second_high[1]
+set_location_assignment PIN_AD25 -to second_high[2]
+set_location_assignment PIN_AC25 -to second_high[3]
+set_location_assignment PIN_AB28 -to second_high[4]
+set_location_assignment PIN_AB25 -to second_high[5]
+set_location_assignment PIN_AB22 -to second_high[6]
+set_location_assignment PIN_AJ29 -to msecond_high[0]
+set_location_assignment PIN_AH29 -to msecond_high[1]
+set_location_assignment PIN_AH30 -to msecond_high[2]
+set_location_assignment PIN_AG30 -to msecond_high[3]
+set_location_assignment PIN_AF29 -to msecond_high[4]
+set_location_assignment PIN_AF30 -to msecond_high[5]
+set_location_assignment PIN_AD27 -to msecond_high[6]
+set_location_assignment PIN_AE26 -to msecond_low[0]
+set_location_assignment PIN_AE27 -to msecond_low[1]
+set_location_assignment PIN_AE28 -to msecond_low[2]
+set_location_assignment PIN_AG27 -to msecond_low[3]
+set_location_assignment PIN_AF28 -to msecond_low[4]
+set_location_assignment PIN_AG28 -to msecond_low[5]
+set_location_assignment PIN_AH28 -to msecond_low[6]
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_NCE_PIN OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_location_assignment PIN_V16 -to is_running
+set_location_assignment PIN_W16 -to is_displaying
+set_location_assignment PIN_V18 -to overflow
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
