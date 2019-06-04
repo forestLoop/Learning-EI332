@@ -55,3 +55,5 @@ work
 *example*
 *sopc_*
 
+*.doc*
+/*.pdf
