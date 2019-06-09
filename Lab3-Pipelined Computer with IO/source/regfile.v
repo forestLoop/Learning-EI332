@@ -11,7 +11,7 @@ module regfile (rna,rnb,d,wn,we,clk,clrn,qa,qb);
    assign qa = (rna == 0)? 0 : register[rna]; // read
    assign qb = (rnb == 0)? 0 : register[rnb]; // read
 
-   always @(posedge clk or negedge clrn) begin
+   always @(negedge clk or negedge clrn) begin
       if (clrn == 0) begin : reset // reset
          integer i;
          for (i=1; i<32; i=i+1)
